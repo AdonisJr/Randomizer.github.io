@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="random.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <title>Random</title>
+</head>
+
+<body>
+
+    <head></head>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="result">
+                <h4 id="display" class="mt-4">name</h4>
+                <p>Congratulation! please share your screen</p>
+            </div>
+            <div class="names">
+                <div id="1" class="item1 col-2">
+                    <p>Aaron Jayson Pizarro</p>
+                </div>
+                <div id="2" class="item2 col-2">
+                    <p>Airwhen Ibarra</p>
+                </div>
+                <div id="3" class="item3 col-2">
+                    <p>Argel Rentoria Miralles</p>
+                </div>
+                <div id="4" class="item4 col-2">
+                    <p>Christian Paulo Gomonit</p>
+                </div>
+                <div id="5" class="item5 col-2">
+                    <p>Gian Miguel Dela Cruz</p>
+                </div>
+                <div id="6" class="item6 col-2">
+                    <p>Henson Lao</p>
+                </div>
+
+
+                <div id="7" class="item7 col-2">
+                    <p>Jessica Gutierrez</p>
+                </div>
+                <div id="8" class="item8 col-2">
+                    <p>Tristan Jay Gimenez</p>
+                </div>
+                <div id="9" class="item9 col-2">
+                    <p>Johan Genuino</p>
+                </div>
+                <div id="10" class="item10 col-2">
+                    <p>Juanmig Galvez</p>
+                </div>
+                <div id="11" class="item11 col-2">
+                    <p>Ken Domenick Sabella</p>
+                </div>
+                <div id="12" class="item12 col-2">
+                    <p>Leo Villa Reyes</p>
+                </div>
+
+
+
+                <div id="13" class="item13 col-2">
+                    <p>Mary Nikka Richae C. Abangan</p>
+                </div>
+                <div id="14" class="item14 col-2">
+                    <p>Nike Fernandez</p>
+                </div>
+                <div id="15" class="item15 col-2">
+                    <p>Neo Cimafranca Jamorabon</p>
+                </div>
+                <div id="16" class="item16 col-2">
+                    <p>Niño Ancheta</p>
+                </div>
+                <div id="17" class="item17 col-2">
+                    <p>Paul Maverick Pastor</p>
+                </div>
+                <div id="18" class="item18 col-2">
+                    <p>Reuel Mendoza</p>
+                </div>
+
+                <div id="19" class="item19 col-2">
+                    <p>Adonis Jr. Suico</p>
+                </div>
+                <div id="20" class="item20 col-2">
+                    <p>Spencer Bohol</p>
+                </div>
+                <div id="21" class="item20 col-2">
+                    <p>Nike Fernandez</p>
+                </div>
+                <div id="22" class="item20 col-2">
+                    <p>Nike Fernandez</p>
+                </div>
+                <div id="23" class="item20 col-2">
+                    <p>Nike Fernandez</p>
+                </div>
+                <div id="24" class="item20 col-2">
+                    <p>Nike Fernandez</p>
+                </div>
+
+
+            </div>
+            <div class="button">
+                <button id="startBtn" type="button" class="btn btn-primary me-2">Start</button>
+                <button id="stopBtn" type="button" class="btn btn-success me-2">Stop</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <script>
+        let interval;
+        let currentValue;
+        let before;
+        let studentArray = [{
+            id: 1,
+            name: 'Aaron Jayson Pizarro'
+        }, {
+            id: 2,
+            name: 'Airwhen Ibarra'
+        }, {
+            id: 3,
+            name: 'Argel Rentoria Miralles'
+        }, {
+            id: 4,
+            name: 'Christian Paulo Gomonit'
+        }, {
+            id: 5,
+            name: 'Gian Miguel Dela Cruz'
+        }, {
+            id: 6,
+            name: 'Henson Lao'
+        }, {
+            id: 7,
+            name: 'Jessica Gutierrez'
+        }, {
+            id: 8,
+            name: 'Tristan Jay Gimenez'
+        }, {
+            id: 9,
+            name: 'Johan Genuino'
+        }, {
+            id: 10,
+            name: 'Juanmig Galvez'
+        }, {
+            id: 11,
+            name: 'Ken Domenick Sabella'
+        }, {
+            id: 12,
+            name: 'Leo Villa Reyes'
+        }, {
+            id: 13,
+            name: 'Mary Nikka Richae C. Abangan'
+        }, {
+            id: 14,
+            name: 'Nike Fernandez'
+        }, {
+            id: 15,
+            name: 'Neo Cimafranca Jamorabon'
+        }, {
+            id: 16,
+            name: 'Niño Ancheta'
+        }, {
+            id: 17,
+            name: 'Paul Maverick Pastor'
+        }, {
+            id: 18,
+            name: 'Reuel Mendoza'
+        }, {
+            id: 19,
+            name: 'Adonis Jr. Suico'
+        }, {
+            id: 20,
+            name: 'Spencer Bohol'
+        }, {
+            id: 21,
+            name: 'Nike Fernandez'
+        }, {
+            id: 22,
+            name: 'Nike Fernandez'
+        }, {
+            id: 23,
+            name: 'Nike Fernandez'
+        }, {
+            id: 24,
+            name: 'Nike Fernandez'
+        }, ]
+
+        function getRandom() {
+            return Math.floor(Math.random() * 23) + 1;
+        }
+
+        function myRandom() {
+            currentValue = getRandom();
+            let element = document.getElementById(currentValue)
+
+            if (before != null) {
+                document.getElementById(before).classList.remove("SelectedDiv")
+            }
+            element.classList.add("SelectedDiv")
+
+            before = currentValue
+        }
+
+        function Start() {
+            interval = setInterval(myRandom, 0.1)
+        }
+
+
+        function Stop() {
+            clearInterval(interval);
+            getStudent = studentArray.forEach(item => {
+                if (item.id == currentValue) {
+                    document.getElementById('display').textContent = item.name
+                }
+            });
+            return getStudent
+        }
+
+        window.onload = function() {
+            document.getElementById('startBtn').onclick = Start;
+            document.getElementById('stopBtn').onclick = Stop;
+        }
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>

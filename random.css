@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+main .names {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: white;
+    margin: 10px 0;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7,
+.item8,
+.item9,
+.item10,
+.item11,
+.item12,
+.item13,
+.item14,
+.item15,
+.item16,
+.item17,
+.item18,
+.item19,
+.item20,
+.item21 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border: 1px solid rgb(37, 2, 2);
+    font-size: 16px;
+    width: 100px;
+    height: 100px;
+    border: 2px
+}
+
+.SelectedDiv {
+    background-color: rgb(224, 110, 110);
+    color: black;
+}
+
+.notSelectedDiv {
+    background-color: rgb(224, 110, 110);
+    color: white;
+}
+
+main .result {
+    text-align: center;
+    background-color: brown;
+    color: white;
+}
+
+#display {
+    display: block;
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+}
+
+main .button {
+    display: flex;
+    justify-content: center;
+    background-color: brown;
+    padding: 2rem;
+}
+
+.button button {
+    width: 20%;
+}
